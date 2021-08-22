@@ -1,0 +1,48 @@
+<div class="recording">
+    <img class="recording__img" src="../../assets/img/microphone.png" alt="microphone">
+    <div class="recording__line">
+        <div class="recording__line-yellow"></div>
+    </div>
+    <p class="recording__percent">{{count}}%</p>
+    <p class="recording__title">Запись сообщения</p>
+</div>
+
+
+
+<div class="end">
+    <div class="end__box-message">
+        <p class="end__message">
+            Спасибо за Ваши ответы! 
+            <br><span>Мы подготовили для Вас 
+            <br>персональную аудио запись с 
+            <br>Вашим прогнозом.</span>
+            </p>
+    </div>
+    <p class="end__text">
+        Вы можете узнать, как повлиять 
+        <br>на события, которые ожидают 
+        <br>вас в ближайшем будущем. 
+    </p>
+    <div class="end__box-date">
+        <p class="end__date">
+            ПЕРВОЕ ЗНАЧИМОЕ 
+            <br>СОБЫТИЕ МОЖЕТ 
+            <br>ПРОИЗОЙТИ УЖЕ 14.02.2021, 
+            <br>Вам надо быть готовым, что 
+            <br>бы последствия не оказались 
+            <br>необратимыми.
+        </p>
+    </div>
+    <p class="end__text">
+        Нажмите на кнопку ниже прямо 
+        <br>сейчас и наберите наш номер 
+        <br>телефона. Прослушайте важную 
+        <br>информацию!
+    </p>
+    <button (click)="callSrv()" class="end__btn">Позвонить и прослушать</button>
+    <p *ngIf="isActive" class="end__user">Имя: <span>{{user?.name}}</span> <br>Рост: <span>{{user?.height}}</span></p>
+    <p class="end__footer">
+        TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU 
+        <br>DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI, 
+    </p>
+</div>

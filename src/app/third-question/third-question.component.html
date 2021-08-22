@@ -1,0 +1,42 @@
+<div class="third">
+    <div class="third__box-quote">
+        <p class="third__quote">
+            Уже совсем скоро Вы узнаете 
+            <br>много интересного о своем будущем!
+        </p>
+        <img class="third__img-eye1" src="../../assets/img/eye-1.svg" alt="eye-1">
+    </div>
+    <div class="third__line"></div>
+    <p class="third__question">Укажите свою дату рождения:</p>
+
+    <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <select class="third__input" name="day" formControlName="day">
+                <option value="">День</option>
+                <option class="third__option" *ngFor="let day of days" [ngValue]="day">{{day}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select class="third__input" name="month" formControlName="month">
+                <option value="">Месяц</option>
+                <option class="third__option" *ngFor="let month of months" [ngValue]="month">{{month}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select class="third__input" name="year" formControlName="year">
+                <option value="">Год</option>
+                <option class="third__option" *ngFor="let year of years" [ngValue]="year">{{year}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button class="third__btn" [disabled]="myForm.invalid">Далее</button>
+        </div>
+    </form>
+
+    <img class="third__img-eye" src="../../assets/img/eye.svg" alt="eye">
+    <p class="third__num-question">Вопрос 3-5</p>
+</div>
